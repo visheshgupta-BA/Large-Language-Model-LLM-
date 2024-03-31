@@ -46,10 +46,10 @@ This enables the model to weigh different parts of the input sequence when proce
 ## Model Overview
 
 <div align="center">
-  <img src="image_link_here" alt="Transformer Model" />
+  <img src="https://github.com/visheshgupta-BA/Large-Language-Model-LLM-/blob/main/Image/Screenshot%202024-03-31%20at%2017.04.49.png" alt="Transformer Model" />
 </div>
 
-
+<br>
 Let's begin by looking at the model as a single black box. In a machine translation application, it would take a sentence in one language and output its translation in another.
 
 ### Internal Components
@@ -68,4 +68,19 @@ The input sequence flows through the self-attention layer first, followed by the
 ### Decoder Architecture
 
 The decoder receives the output of the encoder component and includes both the self-attention layer and feed-forward layer. However, between them lies an attention layer that helps the decoder focus on relevant parts of the input sentence.
+
+
+<div align="center">
+  <img src="https://github.com/visheshgupta-BA/Large-Language-Model-LLM-/blob/main/Image/Screenshot%202024-03-31%20at%2017.04.49.png" alt="Transformer Model" />
+</div>
+
+<br>
+
+
+
+Now, each encoder is broken down into two sub-layers: the self-attention layer and the feed-forward neural network layer.
+
+- The inputs first flow through a self-attention layer, and the outputs of the self-attention layer are fed to a feed-forward neural network. And this sequence is repeated till reaches the last encoder.
+
+- Finally, the decoder receives the output of the encoder component and also has both the self-attention layer and feed-forward layer, and the flow is similar to before, but between them there is an attention layer that helps the decoder focus on relevant parts of the input sentence.
 
