@@ -31,4 +31,41 @@ Large Language Models (LLMs) represent a breakthrough in natural language proces
   
 - **Continual Training:** LLMs undergo continual training to ensure they stay updated with the latest data trends, linguistic nuances, and language shifts.
 
+------
+
+## 2) Describe the architecture of a transformer model that is commonly used in LLMs.
+
+## Core Components
+
+### Encoder-Decoder Model
+The Transformer initially featured separate encoders for processing the input sequence and decoders for generating outputs. However, variants like GPT (Generative Pre-trained Transformer) have focused on using only the encoder for tasks such as language modeling.
+
+### Self-Attention Mechanism
+This enables the model to weigh different parts of the input sequence when processing each element. This mechanism forms the heart of both the encoder and decoder.
+
+## Model Overview
+
+<div align="center">
+  <img src="image_link_here" alt="Transformer Model" />
+</div>
+
+
+Let's begin by looking at the model as a single black box. In a machine translation application, it would take a sentence in one language and output its translation in another.
+
+### Internal Components
+
+- **Encoding Component:** This comprises a stack of N encoders.
+- **Decoding Component:** This comprises a stack of N decoders, with connections between them.
+
+### Encoder Architecture
+
+Each encoder consists of two sub-layers:
+1. **Self-Attention Layer:** Processes inputs to weigh different parts of the input sequence.
+2. **Feed-Forward Neural Network Layer:** Receives outputs from the self-attention layer and applies further transformations.
+
+The input sequence flows through the self-attention layer first, followed by the feed-forward neural network layer. This process repeats until it reaches the last encoder.
+
+### Decoder Architecture
+
+The decoder receives the output of the encoder component and includes both the self-attention layer and feed-forward layer. However, between them lies an attention layer that helps the decoder focus on relevant parts of the input sentence.
 
